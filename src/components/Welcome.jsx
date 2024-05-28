@@ -7,6 +7,6 @@ const Welcome = () => {
       <p>You have successfully logged in.</p>
     </div>
   );
-};
+}; 
 
 export default Welcome;
