@@ -8,7 +8,7 @@ const SignupForm = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:4000/signup', {
+      const response = await fetch('http://localhost:4000/users', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -17,7 +17,7 @@ const SignupForm = () => {
       });
 
       if (response.ok) {
-        navigate('/welcome');
+        navigate('/login');
       } else {
         alert('Signup failed');
       }
