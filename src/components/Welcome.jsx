@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Wordle from "./Wordle";
 
 function Welcome() {
   const [word, setWord] = useState(null);
@@ -26,7 +27,7 @@ function Welcome() {
     <div>
       <h1>Welcome!</h1>
       <p>You have successfully logged in.</p>
-      {word && <div> Word is: {word} </div>}
+      {word && <Wordle word={word} />}
     </div>
   );
 }
